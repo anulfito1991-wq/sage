@@ -3,7 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sage — Menopause Symptom Tracker</title>
+
+  <!-- Primary SEO -->
+  <title>Sage — Menopause & Perimenopause Symptom Tracker for iPhone</title>
+  <meta name="description" content="Sage is a private menopause tracker for iPhone. Log hot flashes, night sweats, brain fog, HRT, sleep and mood. 100% on-device — your data never leaves your phone. Free to download.">
+  <meta name="keywords" content="menopause tracker, perimenopause tracker, hot flash tracker, night sweats app, menopause journal, HRT tracker, menopause symptoms app, brain fog tracker, menopause diary, iOS menopause app">
+  <link rel="canonical" href="https://anulfito1991-wq.github.io/sage/">
+
+  <!-- Open Graph (iMessage previews, social sharing, Reddit) -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://anulfito1991-wq.github.io/sage/">
+  <meta property="og:title"       content="Sage — Menopause Symptom Tracker for iPhone">
+  <meta property="og:description" content="Track hot flashes, night sweats, mood, sleep and HRT — all privately on your iPhone. No account. No cloud. No ads.">
+  <meta property="og:image"       content="https://anulfito1991-wq.github.io/sage/og-image.png">
+  <meta property="og:site_name"   content="Sage">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Sage — Menopause Symptom Tracker">
+  <meta name="twitter:description" content="Private menopause tracking for iPhone. Log hot flashes, HRT, sleep, mood and more — 100% on-device.">
+  <meta name="twitter:image"       content="https://anulfito1991-wq.github.io/sage/og-image.png">
+
+  <!-- Schema.org structured data — SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Sage: Menopause Tracker",
+    "operatingSystem": "iOS",
+    "applicationCategory": "HealthApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "description": "Sage is a private menopause and perimenopause symptom tracker for iPhone. Track hot flashes, night sweats, brain fog, mood, energy, sleep, HRT compliance, and more — all stored on-device with no cloud sync.",
+    "url": "https://anulfito1991-wq.github.io/sage/",
+    "author": {
+      "@type": "Person",
+      "name": "Anulfo Acosta"
+    },
+    "keywords": "menopause tracker, perimenopause, hot flash tracker, HRT tracker, night sweats, brain fog, menopause journal"
+  }
+  </script>
+
+  <!-- FAQPage schema — captures "People also ask" results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Sage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sage is a free iPhone app for tracking menopause and perimenopause symptoms including hot flashes, night sweats, brain fog, mood, sleep quality, and HRT compliance. All data is stored on your device — nothing is ever sent to a server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Sage free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sage is free to download with core symptom tracking, a 7-day heat map, and educational articles. Sage Premium ($6.99/month or $49.99/year) unlocks 90-day doctor reports, advanced trends, and HRT correlation charts. A 7-day free trial is included."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Sage sync with Apple Health?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sage can optionally read sleep and resting heart rate from Apple Health to enrich your trends. It does not write to Apple Health, and all data stays on your iPhone."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my menopause data private?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Completely. Sage has no server, no account, and no cloud sync. Your symptoms, journal notes, and HRT details are stored only on your iPhone using Apple's encrypted SwiftData framework. We have no access to your data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I track HRT with Sage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sage lets you log your HRT type, dose, and start date. The daily log includes an HRT compliance toggle, and Premium unlocks a correlation chart showing how your hot flash frequency tracks alongside your HRT regimen."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --sage: #778978;
@@ -17,72 +110,173 @@
     header { background: var(--sage); padding: 5rem 1.5rem 4rem; text-align: center; }
     header h1 { color: #fff; font-size: 3rem; font-weight: 700;
                 font-family: Georgia, "Times New Roman", serif; }
-    header p { color: rgba(255,255,255,0.88); font-size: 1.2rem; margin-top: 0.75rem; max-width: 540px; margin-left: auto; margin-right: auto; }
+    header p { color: rgba(255,255,255,0.88); font-size: 1.2rem; margin-top: 0.75rem;
+               max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.6; }
     .badge-row { margin-top: 2rem; }
     .badge-row img { height: 44px; }
     main { max-width: 760px; margin: 0 auto; padding: 3.5rem 1.5rem; }
     h2 { color: var(--brown); font-size: 1.5rem; font-weight: 700;
          margin-bottom: 1rem; font-family: Georgia, serif; }
+    h3.section-label { color: var(--sage); font-size: 0.8rem; font-weight: 700;
+                       letter-spacing: 0.1em; text-transform: uppercase;
+                       margin-bottom: 0.5rem; margin-top: 3rem; }
     p { line-height: 1.7; margin-bottom: 1rem; font-size: 1rem; }
     .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
                 gap: 1.25rem; margin: 2rem 0; }
     .feature-card { background: #fff; border-radius: 14px; padding: 1.25rem; }
     .feature-card h3 { color: var(--sage); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
-    .feature-card p { font-size: 0.9rem; color: #555; margin: 0; }
+    .feature-card p { font-size: 0.9rem; color: #555; margin: 0; line-height: 1.5; }
     .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+    /* Keyword symptom pills — helps search engines pick up long-tail terms */
+    .symptom-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 2rem; }
+    .pill { background: #fff; border: 1px solid rgba(119,137,120,0.3);
+            border-radius: 20px; padding: 0.35rem 0.85rem;
+            font-size: 0.85rem; color: var(--brown); }
+
+    /* FAQ section */
+    .faq { margin-top: 1rem; }
+    details { background: #fff; border-radius: 10px; padding: 1rem 1.25rem;
+              margin-bottom: 0.75rem; }
+    summary { font-weight: 600; font-size: 0.97rem; cursor: pointer;
+              color: var(--brown); list-style: none; }
+    summary::after { content: " ›"; color: var(--sage); }
+    details[open] summary::after { content: " ‹"; }
+    details p { margin-top: 0.75rem; font-size: 0.93rem; color: #555; margin-bottom: 0; }
+
     footer { text-align: center; padding: 2rem; font-size: 0.85rem; color: #888;
              border-top: 1px solid rgba(0,0,0,0.08); }
     footer a { color: var(--sage); text-decoration: none; }
   </style>
 </head>
 <body>
+
 <header>
   <h1>Sage</h1>
-  <p>Your private menopause companion. Track symptoms, spot patterns, and walk into every doctor's appointment prepared.</p>
+  <p>The private menopause &amp; perimenopause tracker. Log hot flashes, HRT, sleep and symptoms — all on your iPhone, never on a server.</p>
   <div class="badge-row">
     <!-- Replace href with App Store link when live -->
-    <a href="#"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store"></a>
+    <a href="#"><img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download Sage — Menopause Tracker on the App Store"></a>
   </div>
 </header>
 
 <main>
-  <h2>All your data. Only on your iPhone.</h2>
-  <p>Sage stores everything locally using Apple's SwiftData. No account required. No cloud sync. No analytics. Your health data never leaves your device.</p>
 
+  <!-- Core value prop — keyword-dense -->
+  <h2>Private menopause tracking, built for your iPhone.</h2>
+  <p>Sage is a <strong>menopause symptom tracker</strong> and <strong>perimenopause journal</strong> that lives entirely on your iPhone. No account. No cloud. No ads. Track <strong>hot flashes</strong>, <strong>night sweats</strong>, <strong>brain fog</strong>, mood, energy, sleep quality, <strong>HRT compliance</strong>, and 13+ other symptoms — then walk into your next doctor's appointment with 90 days of real data.</p>
+
+  <!-- Symptom keyword pills — indexed by Google, each one is a long-tail search term -->
+  <h3 class="section-label">Symptoms you can track</h3>
+  <div class="symptom-pills" aria-label="Trackable menopause symptoms">
+    <span class="pill">Hot flashes</span>
+    <span class="pill">Night sweats</span>
+    <span class="pill">Brain fog</span>
+    <span class="pill">Mood changes</span>
+    <span class="pill">Sleep quality</span>
+    <span class="pill">Energy levels</span>
+    <span class="pill">Heart palpitations</span>
+    <span class="pill">Joint pain</span>
+    <span class="pill">Headaches</span>
+    <span class="pill">Vaginal dryness</span>
+    <span class="pill">Libido</span>
+    <span class="pill">Weight</span>
+    <span class="pill">Cycle / spotting</span>
+    <span class="pill">HRT compliance</span>
+    <span class="pill">Trigger foods</span>
+    <span class="pill">Stress triggers</span>
+    <span class="pill">Custom symptoms</span>
+  </div>
+
+  <h3 class="section-label">Features</h3>
   <div class="features">
     <div class="feature-card">
       <div class="icon">🌡️</div>
-      <h3>Hot Flash Tracking</h3>
-      <p>One tap to log. 7-day heat map shows time-of-day patterns at a glance.</p>
+      <h3>Hot Flash Tracker</h3>
+      <p>One tap to log. 7-day heat map shows time-of-day patterns. See when flashes peak and plan around them.</p>
     </div>
     <div class="feature-card">
       <div class="icon">📅</div>
       <h3>Symptom Calendar</h3>
-      <p>Month view with color-coded daily burden score. See your patterns over time.</p>
+      <p>Month view with color-coded daily burden score. Spot your heaviest symptom days instantly.</p>
     </div>
     <div class="feature-card">
       <div class="icon">📄</div>
-      <h3>Doctor Reports</h3>
-      <p>Export a 90-day PDF your specialist can read in 2 minutes. Premium feature.</p>
+      <h3>Doctor-Ready Reports</h3>
+      <p>Export a 90-day PDF your specialist can scan in 2 minutes — hot flash timeline, sleep trends, HRT compliance, and suggested questions.</p>
     </div>
     <div class="feature-card">
       <div class="icon">💊</div>
-      <h3>HRT Correlation</h3>
-      <p>Track how your symptom load correlates with your HRT regimen over time.</p>
+      <h3>HRT Tracker</h3>
+      <p>Log your regimen, mark daily compliance, and see a before/after correlation chart in Premium.</p>
     </div>
     <div class="feature-card">
       <div class="icon">❤️</div>
-      <h3>Apple Health</h3>
-      <p>Optional read-only connection to enrich sleep and heart rate trends.</p>
+      <h3>Apple Health Sync</h3>
+      <p>Optional read-only connection for sleep hours and resting heart rate — pre-fills your daily log automatically.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🔒</div>
+      <h3>100% Private</h3>
+      <p>No account. No server. No analytics. Your health data never leaves your iPhone. Encrypted by iOS.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📊</div>
+      <h3>30 &amp; 90-Day Trends</h3>
+      <p>Charts for hot flashes, sleep, mood, energy, brain fog, and top triggers. See the patterns your doctor needs to see.</p>
     </div>
     <div class="feature-card">
       <div class="icon">📚</div>
       <h3>Education</h3>
-      <p>5 evidence-based articles on perimenopause, hot flashes, HRT, sleep, and more.</p>
+      <p>5 evidence-based articles on perimenopause, hot flash biology, HRT, sleep, and when to see a doctor.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎯</div>
+      <h3>Trigger Logging</h3>
+      <p>Track what triggered symptoms (coffee, stress, heat…) and what helped (cold water, breathing, yoga…). Patterns emerge in weeks.</p>
     </div>
   </div>
 
-  <p><em>Sage is a wellness tracking app. It is not a medical device and does not provide medical advice. Always consult a qualified healthcare provider.</em></p>
+  <!-- Pricing — natural keyword placement -->
+  <h3 class="section-label">Pricing</h3>
+  <h2>Free to track. Premium when you're ready.</h2>
+  <p>Core symptom tracking, the hot flash heat map, and 5 education articles are free forever. <strong>Sage Premium</strong> ($6.99/month or $49.99/year, 7-day free trial) unlocks 90-day doctor reports, advanced 30-day trends, and HRT correlation charts.</p>
+
+  <!-- FAQ — targets "People also ask" box + long-tail queries -->
+  <h3 class="section-label">Frequently asked questions</h3>
+  <div class="faq">
+    <details>
+      <summary>Is Sage free?</summary>
+      <p>Yes. Core tracking is free forever — hot flashes, mood, sleep, night sweats, and basic 7-day charts. Sage Premium ($6.99/month or $49.99/year) unlocks 90-day doctor-ready PDF reports, 30-day advanced trend charts, and the HRT correlation view. A 7-day free trial is included with every new Premium subscription.</p>
+    </details>
+    <details>
+      <summary>How is Sage different from other menopause apps?</summary>
+      <p>Sage is the only major menopause tracker with 100% on-device storage — no account, no cloud, no analytics. It also offers HRT correlation tracking, a daily symptom burden score, trigger and management logging, and a doctor-formatted PDF export that competitors don't provide in this combination.</p>
+    </details>
+    <details>
+      <summary>Does Sage connect to Apple Health?</summary>
+      <p>Optionally. Sage can read your sleep hours and resting heart rate from Apple Health to pre-fill your daily log and enrich your trends. It never writes to Apple Health, and HealthKit data stays on your device.</p>
+    </details>
+    <details>
+      <summary>Can I track perimenopause symptoms?</summary>
+      <p>Yes — Sage is built for all stages: perimenopause, menopause, and post-menopause. During perimenopause it also tracks cycle status (period, spotting, or none) alongside all other symptoms.</p>
+    </details>
+    <details>
+      <summary>Can I use Sage to track my HRT?</summary>
+      <p>Yes. You log your HRT type, dose, start date, and frequency during setup. Each daily log includes an HRT compliance checkbox. Premium users see a before/after chart showing how hot flash frequency correlates with their HRT regimen.</p>
+    </details>
+    <details>
+      <summary>Is my health data private?</summary>
+      <p>Completely. Sage has no server and no account. All your symptoms, journal notes, HRT details, and Apple Health data are stored only on your iPhone in encrypted local storage. We have zero access to your data.</p>
+    </details>
+    <details>
+      <summary>Is Sage a medical app?</summary>
+      <p>No. Sage is a personal wellness journal — it does not diagnose, treat, or prevent any medical condition. Always consult a qualified healthcare provider about your symptoms and treatment options. In an emergency, call 911 or your local emergency number.</p>
+    </details>
+  </div>
+
+  <p style="margin-top:2.5rem;font-size:0.88rem;color:#888;font-style:italic;">Sage is a wellness tracking app. It is not a medical device and does not provide medical advice. Always consult a qualified healthcare provider.</p>
+
 </main>
 
 <footer>
@@ -92,5 +286,6 @@
     <a href="mailto:anulfito1991@gmail.com">Contact</a>
   </p>
 </footer>
+
 </body>
 </html>
